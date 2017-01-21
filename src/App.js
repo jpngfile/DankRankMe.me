@@ -6,33 +6,74 @@ import leftArrow from '../pics/icons/chevron-left.png'
 
 import './App.css';
 
+
 class App extends Component {
-  render() {
+
+
+  constructor() {
+    super();
+
+    this.state = {
+      data:
+      [
+        {
+          "id":1,
+          "caption":"Caption 1"
+        },
+        {
+          "id":2,
+          "caption":"Caption 2"
+        },
+        {
+          "id":3,
+          "caption":"Caption 3"
+        },
+        {
+          "id":4,
+          "caption":"Caption 4"
+        },
+      ],
+      index : 0,
+      length: 4
+    }
+  }
+
+  changeCaption (incre) {
+    this.setState ({
+      data: this.state.data,
+      index: (this.state.index+incre)%this.state.length,
+      length: this.state.length
+    });
+  }
+  
+  render () {
     return (
-      <div className="App">
-        <Header />
-        <div className="Meme-display">
-          <ArrowButton className="Left-arrow-button" icon={leftArrow}/>
-          <MemeContent />
-          <ArrowButton className="Right-arrow-button" icon={rightArrow}/>
-        </div>
-      </div>
+    <div className="App">
+    <Header />
+    
+    <div className="Meme-display">
+          <ArrowButton className="Left-arrow-button" icon={leftArrow} />
+          <MemeContent caption={this.state.data[0].caption} />
+          <ArrowButton className="Right-arrow-button" icon={rightArrow} />
+    </div>
+    </div>
     );
   }
 }
 
-class defaultReactComponent extends Component {
+
+class Appee extends Component {
   render () {
     return (
-      <div className = "App">
-      <div className="App-header">
+      <div className="App">
+        <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        </div>
+      </div>
     );
   }
 }
@@ -48,22 +89,26 @@ class Header extends Component {
 }
 
 class MemeContent extends Component {
+
   render () {
     return (
-      <div className = "Meme-content Meme-display-component">
+      <div className="Meme-content Meme-display-component">
         <img src={kermitMeme} className="currentMeme" alt="dank meme" />
+        <h2 className="Meme-caption">{this.props.caption}</h2>
       </div>
 
     );
   }
+  
 }
 
 //prop arrowIcon
+
 class ArrowButton extends Component {
   render () {
     return (
       <button className={"Meme-display-component Arrow-button " + this.props.className}>
-        <img src={this.props.icon} className="Arrow-button-img"/>
+        <img src={this.props.icon} className="Arrow-button-img" alt="chevron arrow"/>
       </button>
     );
   }
