@@ -1,3 +1,13 @@
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        background: transparent;
+    }
+
 .App {
   text-align: center;
 }
@@ -18,6 +28,53 @@
   font-size: large;
 }
 
+.Dank-header {
+  background-color: #E53935;
+  text-align: left;
+  
+}
+.Dank-header-title {
+  color :white;
+  font-family: "Impact", Charcoal, sans-serif;
+  padding: 20px;
+  font-size: 30pt;
+  border-style: double;
+}
+
+.currentMeme {
+  height :300px;
+  /*display:inline;*/
+}
+
+.Meme-display {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.Meme-display-component {
+  display :inline-block;
+}
+
+.Arrow-button-img {
+  height: 80px;
+  border-style: double;
+  margin-bottom: 110px;
+}
+
+.Arrow-button {
+  border-style: double;
+}
+
+/*
+.Right-arrow-button {
+  float: left;
+  border-style: double;
+}
+
+.Left-arrow-button {
+  float :right;
+}
+*/
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
