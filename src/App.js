@@ -9,6 +9,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
+<<<<<<< HEAD
       <div className="App">
         <Header />
         <div className="Meme-display">
@@ -53,6 +54,7 @@ class MemeContent extends Component {
       <div className = "Meme-content Meme-display-component">
         <img src={kermitMeme} className="currentMeme" alt="dank meme" />
       </div>
+
     );
   }
 }
