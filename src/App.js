@@ -9,7 +9,6 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-<<<<<<< HEAD
       <div className="App">
         <Header />
         <div className="Meme-display">
