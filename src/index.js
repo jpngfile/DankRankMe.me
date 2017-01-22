@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Rate from './rate/Rate';
 import Submit from './submit/Submit';
+import Home from './home/Home';
 
 import AppHeader from './layout/AppHeader'
 
@@ -15,7 +16,7 @@ injectTapEventPlugin();
 const ThemeWrapper = () => (
     <Router history={browserHistory}>
       <Route component={AppHeader}>
-        <Route path="/" component={Rate} />
+        <Route path="/" component={Home} />
         <Route path="/rate" component={Rate} />  
         <Route path="/submit" component={Submit} />
       </Route>
