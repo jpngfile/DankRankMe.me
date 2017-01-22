@@ -23,7 +23,7 @@ export default class LayoutTopHeader extends Component {
 	render () {
     return (
     	<div>
-		
+
       <AppBar
         className="Dank-header" title="DankRank"
 		style={{position: 'fixed', top:"0", left:"0"}}
@@ -43,7 +43,7 @@ export default class LayoutTopHeader extends Component {
       <Drawer open={this.state.open}>
           <MenuItem>My Rated Memes</MenuItem>
           <MenuItem href="/">Newest Memes</MenuItem>
-          <MenuItem>Legacy Memes</MenuItem>
+          <MenuItem href='/rate'>Rate Memes</MenuItem>
 		  <MenuItem href="/about">About</MenuItem>
           <MenuItem onTouchTap={this.handleToggle}> Close Menu </MenuItem>
         </Drawer>

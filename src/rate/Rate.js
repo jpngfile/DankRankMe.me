@@ -53,34 +53,29 @@ export default class Rate extends Component {
     }
 	this.onDrop = this.onDrop.bind(this)
   }
-  
+
 componentDidMount() {
-	var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
-copyEmailBtn.addEventListener('click', function(event) {  
-  // Select the email link anchor text  
-  var emailLink = document.querySelector('.js-emaillink');  
-  var range = document.createRange();  
-  range.selectNode(emailLink);  
-  window.getSelection().addRange(range);
+  var copyEmailBtn = document.querySelector('.js-emailcopybtn');
+  copyEmailBtn.addEventListener('click', function(event) {
+    // Select the email link anchor text
+    var emailLink = document.querySelector('.js-emaillink');
+    var range = document.createRange();
+    range.selectNode(emailLink);
+    window.getSelection().addRange(range);
 
-  try {  
-    // Now that we've selected the anchor text, execute the copy command  
-    var successful = document.execCommand('copy');  
-    var msg = successful ? 'successful' : 'unsuccessful';  
-    console.log('Copy email command was ' + msg);  
-  } catch(err) {  
-    console.log('Oops, unable to copy');  
-  }
+    try {
+      // Now that we've selected the anchor text, execute the copy command
+      var successful = document.execCommand('copy');
+      var msg = successful ? 'successful' : 'unsuccessful';
+      console.log('Copy email command was ' + msg);
+    } catch(err) {
+      console.log('Oops, unable to copy');
+    }
 
-  // Remove the selections - NOTE: Should use
-  // removeRange(range) when it is supported  
-  window.getSelection().removeAllRanges();  
-});
-/*          <RateArrowButton className="Left-arrow-button" icon={ArrowLeft} isRight={false} onClick={() => this.changeCaption(1)} />        
-          <RateArrowButton className="Right-arrow-button" icon={ArrowRight} isRight={true} onClick={() => this.changeCaption(1)}/>
-          */
-
-
+    // Remove the selections - NOTE: Should use
+    // removeRange(range) when it is supported
+    window.getSelection().removeAllRanges();
+  });
 }
 
   changeCaption (incre) {
@@ -139,6 +134,9 @@ copyEmailBtn.addEventListener('click', function(event) {
           <RateMemeContent caption={this.state.data[this.state.index].caption} />
 
     	</div>
+      <p><a className="js-emaillink" >{window.location.href}</a></p>
+
+      <p><button className="js-emailcopybtn">COPY URL</button></p>
       <Dropzone onDrop={this.onDrop} className="noDropZone">
       	<FloatingActionButton secondary={true} className="FloatingActionAdd">
         		<ContentAdd />
@@ -149,3 +147,6 @@ copyEmailBtn.addEventListener('click', function(event) {
   }
 };
 
+
+// <a className="js-emaillink hide">{window.location.href} </a>
+// <p><button className="js-emailcopybtn FloatingActionCopy">Copy URL</button></p>
