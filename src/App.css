@@ -8,4 +8,6 @@
 .Meme-display>div>div>div>div{
 	padding-right:0px!important;
 }
-
+.Meme-display{
+	margin-top:65px!important;
+}
