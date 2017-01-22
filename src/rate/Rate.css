@@ -9,6 +9,14 @@
   margin-right: 10px;
   margin-bottom: 10px;
 }
+.FloatingActionCopy {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.hide{
+	display:none!important;
+}
 
 .currentMeme {
   /*height :300px;*/
