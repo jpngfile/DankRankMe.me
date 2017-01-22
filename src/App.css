@@ -5,3 +5,7 @@
 .Meme-display>div>div>div>div>span{
 	padding-top:13px;
 }
+.Meme-display>div>div>div>div{
+	padding-right:0px!important;
+}
+

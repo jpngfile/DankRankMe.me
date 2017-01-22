@@ -20,6 +20,11 @@
 	clear:both;
 }
 
+.Meme-caption {
+	font-family: "Impact",Charcoal, sans-serif;
+	font-size:30px;
+}
+
 .Meme-display-component {
   /*display :inline-block;*/
   text-align: center;
@@ -31,10 +36,22 @@
   /*margin-bottom: 110px;*/
 }
 
+.captionCarousel {
+	display:inline-block;
+	width: 85%;
+}
+
 .Right-arrow-button {
-  float: right;
+display:inline-block;
 }
 
 .Left-arrow-button {
-  float :left;
+display:inline-block;
 }
+/*
+  float: right;
+  margin-top: -40px;
+
+    float :left;
+  margin-bottom: -20px;
+*/

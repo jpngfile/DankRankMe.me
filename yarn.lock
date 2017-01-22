@@ -4509,6 +4509,13 @@ react-scripts@0.8.5:
   optionalDependencies:
     fsevents "1.0.14"
 
+react-swipe@^5.0.6:
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/react-swipe/-/react-swipe-5.0.6.tgz#0ac5889b18e5aade8ed5c5f1ba1c491a4acec912"
+  dependencies:
+    object-assign "^4.1.0"
+    swipe-js-iso "^2.0.3"
+
 react-tap-event-plugin@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-tap-event-plugin/-/react-tap-event-plugin-2.0.1.tgz#316beb3bc6556e29ec869a7293e89c826a9074d2"
@@ -5127,6 +5134,11 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
+<<<<<<< HEAD
+swipe-js-iso@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/swipe-js-iso/-/swipe-js-iso-2.0.3.tgz#76892ca4fc2928f384ac042739a25f7afe6fcf74"
+=======
 sw-precache@^4.2.2:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/sw-precache/-/sw-precache-4.3.0.tgz#576c6c1c23b61c44ef5d84d33870641060d8c2de"
@@ -5147,6 +5159,7 @@ sw-toolbox@^3.4.0:
   dependencies:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
+>>>>>>> f398713f79eeab93dcc3fd31a4505631ffc1f068
 
 symbol-observable@^1.0.4:
   version "1.0.4"
