@@ -1,11 +1,7 @@
-
-/* Universal Adjustment */
-* {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
-        font-size: 100%;
-        vertical-align: baseline;
-        background: transparent;
-    }
+/* Rate Page CSS */
+.App {
+  text-align: center;
+}
+.Meme-display>div>div>div>div>span{
+	padding-top:13px;
+}

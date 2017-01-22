@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import kermitMeme from '../../pics/memes/KermitTheFrogMeme.jpg';
+import kermitMeme from '../pics/memes/KermitTheFrogMeme.jpg';
 
 import '../App.css';
 import './Rate.css';
