@@ -11,8 +11,18 @@
     }
 
 /* Rate Page CSS */
+.Rate {
+ 
+}
+
 .App {
-  text-align: center;
+
+}
+
+.FloatingActionAdd {
+  float: right;
+  margin-right: 2px;
+  margin-bottom: 20px;
 }
 
 .App-logo {
@@ -46,6 +56,7 @@
 
 .Meme-display-component {
   display :inline-block;
+  text-align: center;
 }
 
 .Arrow-button-img {

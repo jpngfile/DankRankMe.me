@@ -14,22 +14,25 @@ import AppHeader from './layout/AppHeader'
 
 const ThemeWrapper = () => (
   <MuiThemeProvider>
-    
-      <Router history={browserHistory}>
-    <Route component={AppHeader}>
-      <Route path="/" component={App}>
-        <Route path="rate" component={Rate} />
-        <Route path="submit" component={Submit} />
+    <Router history={browserHistory}>
+      <Route component={AppHeader}>
+        <Route path="/" component={App}>
+          <Route path="rate" component={Rate} />
+          <Route path="submit" component={Submit} />
+        </Route>
       </Route>
-    </Route>
-  </Router>
-    </MuiThemeProvider>
+    </Router>
+  </MuiThemeProvider>
 );
 
 ReactDOM.render (
   <ThemeWrapper />,
   document.getElementById('root')
 );
+
+
+
+
 
 /*<Route path="/" component={App}>
         <Route path="rate" component={Rate} />

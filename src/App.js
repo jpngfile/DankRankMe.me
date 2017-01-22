@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import kermitMeme from '../pics/memes/KermitTheFrogMeme.jpg';
-import rightArrow from '../pics/icons/chevron-right.png'
-import leftArrow from '../pics/icons/chevron-left.png'
+import rightArrow from '../pics/icons/chevron-right.png';
+import leftArrow from '../pics/icons/chevron-left.png';
+
 
 //material-ui components
 import AppBar from 'material-ui/AppBar';
+
 
 import './App.css';
 
@@ -34,7 +36,7 @@ class App extends Component {
           "caption":"Caption 4"
         },
       ],
-      index : 0,
+      index : 2,
       length: 4
     }
   }
@@ -50,36 +52,22 @@ class App extends Component {
   render () {
     return (
     <div className="App">
+    
     <Header />
 
     <div className="Meme-display">
           <MemeContent caption={this.state.data[this.state.index].caption} />
-          <ArrowButton className="Left-arrow-button" icon={leftArrow} onClick={() => this.changeCaption(-1)} />
-          
+          <ArrowButton className="Left-arrow-button" icon={leftArrow} onClick={() => alert('click')} />
           <ArrowButton className="Right-arrow-button" icon={rightArrow} onClick={() => this.changeCaption(1)}/>
-
+        
     </div>
+     {this.props.children}
     </div>
     );
   }
 }
 
-
-class Appee extends Component {
-  render () {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+/*  */
 
 class Header extends Component {
   render () {
@@ -95,7 +83,6 @@ class Header extends Component {
   }
 }
 
-/* */
 
 class MemeContent extends Component {
 
@@ -116,7 +103,7 @@ class MemeContent extends Component {
 class ArrowButton extends Component {
   render () {
     return (
-      <button className={"Meme-display-component Arrow-button " + this.props.className}>
+      <button className={"Meme-display-component Arrow-button " + this.props.className} onClick={this.props.onClick}>
         <img src={this.props.icon} className="Arrow-button-img" alt="chevron arrow"/>
       </button>
     );
