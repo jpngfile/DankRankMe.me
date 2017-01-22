@@ -5,6 +5,7 @@ export default class Submit extends Component {
     // Top Menu with DropDown
     return (
       <div className="Submit">
+        <h1>Submit works</h1>
       </div>
     );
   }
