@@ -1,0 +1,13 @@
+/*Layout CSS*/
+
+.Dank-header {
+  background-color: #E53935;
+  text-align: left;
+  font-family: "Impact", Charcoal, sans-serif;
+}
+.Dank-header-title {
+  color :white;
+  
+  padding: 20px;
+  font-size: 30pt;
+}

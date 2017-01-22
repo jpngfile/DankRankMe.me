@@ -1,0 +1,40 @@
+/* Rate Page CSS */
+.Rate {
+  text-align: center;
+}
+
+
+.FloatingActionAdd {
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.currentMeme {
+  /*height :300px;*/
+  display:inline;
+  width : 90%;
+}
+
+.Meme-display {
+	clear:both;
+}
+
+.Meme-display-component {
+  /*display :inline-block;*/
+  text-align: center;
+  overflow: auto;
+}
+
+.Arrow-button{
+
+  /*margin-bottom: 110px;*/
+}
+
+.Right-arrow-button {
+  float: right;
+}
+
+.Left-arrow-button {
+  float :left;
+}

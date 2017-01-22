@@ -1,5 +1,6 @@
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React, { Component } from 'react';
+import LayoutTopHeader from './LayoutTopHeader'
 
 export default class MainLayout extends Component {
   render() {
@@ -9,6 +10,7 @@ export default class MainLayout extends Component {
         <div className="app">
           <header className="primary-header"></header>
           <aside className="primary-aside"></aside>
+          <LayoutTopHeader />
           <main>
             {this.props.children}
           </main>

@@ -52,14 +52,14 @@ class App extends Component {
   render () {
     return (
     <div className="App">
-
+    
     <Header />
 
     <div className="Meme-display">
           <MemeContent caption={this.state.data[this.state.index].caption} />
           <ArrowButton className="Left-arrow-button" icon={leftArrow} onClick={() => alert('click')} />
           <ArrowButton className="Right-arrow-button" icon={rightArrow} onClick={() => this.changeCaption(1)}/>
-
+        
     </div>
      {this.props.children}
     </div>
@@ -78,7 +78,7 @@ class Header extends Component {
       <AppBar
         className="Dank-header" title="DankRank"
         iconClassNameRight="muidocs-icon-navigation-expand-more"
-      />
+      /> 
     );
   }
 }
