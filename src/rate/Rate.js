@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import kermitMeme from '../../pics/memes/KermitTheFrogMeme.jpg';
-
-
+import RateArrowButton from './RateArrowButton';
+import RateMemeContent from './RateMemeContent';
 //material-ui components
-import IconButton from 'material-ui/IconButton';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ArrowRight from 'material-ui/svg-icons/navigation/chevron-right';
 import ArrowLeft from 'material-ui/svg-icons/navigation/chevron-left';
+
 import '../App.css';
+import './Rate.css';
 
 export default class Rate extends Component {
 
@@ -51,12 +51,11 @@ export default class Rate extends Component {
   render () {
     return (
     <div className="Rate">
-
     	<div className="Meme-display">
-          <MemeContent caption={this.state.data[this.state.index].caption} />
-          <ArrowButton className="Left-arrow-button" icon={ArrowLeft} onClick={() => this.changeCaption(1)} />
+          <RateMemeContent caption={this.state.data[this.state.index].caption} />
+          <RateArrowButton className="Left-arrow-button" icon={ArrowLeft} onClick={() => this.changeCaption(1)} />
           
-          <ArrowButton className="Right-arrow-button" icon={ArrowRight} onClick={() => this.changeCaption(1)}/>
+          <RateArrowButton className="Right-arrow-button" icon={ArrowRight} onClick={() => this.changeCaption(1)}/>
     	</div>
     	<FloatingActionButton secondary={true} className="FloatingActionAdd">
       		<ContentAdd />
@@ -67,30 +66,3 @@ export default class Rate extends Component {
 };
 
 
-class MemeContent extends Component {
-
-  render () {
-    return (
-      <div className="Meme-content Meme-display-component">
-        <img src={kermitMeme} className="currentMeme" alt="dank meme" />
-        <h2 className="Meme-caption">{this.props.caption}</h2>
-      </div>
-
-    );
-  }
-
-}
-
-//prop arrowIcon
-
-class ArrowButton extends Component {
-  render () {
-    return (
-      <IconButton className={"Meme-display-component Arrow-button " + this.props.className} onClick={this.props.onClick}>
-        <ArrowRight />
-      </IconButton>
-    );
-  }
-}
-
-//<img src={this.props.icon} className="Arrow-button-img" alt="chevron arrow"/>

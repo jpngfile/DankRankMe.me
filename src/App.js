@@ -52,6 +52,13 @@ class App extends Component {
   render () {
     return (
     <div className="App">
+
+    </div>
+    );
+  }
+}
+
+/* 
     
     <Header />
 
@@ -61,13 +68,7 @@ class App extends Component {
           <ArrowButton className="Right-arrow-button" icon={rightArrow} onClick={() => this.changeCaption(1)}/>
         
     </div>
-     {this.props.children}
-    </div>
-    );
-  }
-}
-
-/*  */
+     {this.props.children} */
 
 class Header extends Component {
   render () {

@@ -10,6 +10,7 @@ import VertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import Drawer from 'material-ui/Drawer';
 
 import '../App.css';
+import './Layout.css';
 
 export default class LayoutTopHeader extends Component {
 	constructor(props) {
