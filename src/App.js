@@ -8,8 +8,6 @@ import './App.css';
 
 
 class App extends Component {
-
-
   constructor() {
     super();
 
@@ -39,23 +37,22 @@ class App extends Component {
   }
 
   changeCaption (incre) {
-    var newIndex = (this.state.index+incre)%this.state.length
     this.setState ({
       data: this.state.data,
-      index: newIndex >= 0 ? newIndex : this.state.length + newIndex,
+      index: (this.state.index+incre)%this.state.length,
       length: this.state.length
     });
   }
-  
+
   render () {
     return (
     <div className="App">
     <Header />
 
     <div className="Meme-display">
-          <ArrowButton className="Left-arrow-button" icon={leftArrow} onClick={() => this.changeCaption(-1)} />
-          <MemeContent caption={this.state.data[this.state.index].caption} />
-          <ArrowButton className="Right-arrow-button" icon={rightArrow} onClick={() => this.changeCaption(1)}/>
+          <ArrowButton className="Left-arrow-button" icon={leftArrow} />
+          <MemeContent caption={this.state.data[0].caption} />
+          <ArrowButton className="Right-arrow-button" icon={rightArrow} />
     </div>
     </div>
     );
@@ -100,7 +97,7 @@ class MemeContent extends Component {
 
     );
   }
-  
+
 }
 
 //prop arrowIcon
@@ -108,7 +105,7 @@ class MemeContent extends Component {
 class ArrowButton extends Component {
   render () {
     return (
-      <button className={"Meme-display-component Arrow-button " + this.props.className} onClick={() => this.props.onClick()}>
+      <button className={"Meme-display-component Arrow-button " + this.props.className}>
         <img src={this.props.icon} className="Arrow-button-img" alt="chevron arrow"/>
       </button>
     );
