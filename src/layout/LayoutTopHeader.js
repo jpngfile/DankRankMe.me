@@ -23,8 +23,10 @@ export default class LayoutTopHeader extends Component {
 	render () {
     return (
     	<div>
+		
       <AppBar
         className="Dank-header" title="DankRank"
+		style={{position: 'fixed', top:"0", left:"0"}}
         iconElementRight={<IconMenu
     		iconButtonElement={
       			<IconButton><VertIcon /></IconButton>

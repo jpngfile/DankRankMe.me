@@ -8,7 +8,8 @@ import Submit from './submit/Submit';
 import Home from './home/Home';
 
 import AppHeader from './layout/AppHeader'
-
+import ScrollReveal from'scrollreveal'
+window.sr = ScrollReveal({ reset: true });
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
@@ -27,3 +28,4 @@ ReactDOM.render (
   <ThemeWrapper />,
   document.getElementById('root')
 );
+window.sr.reveal('.hideScroll',{duration:400});
