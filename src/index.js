@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom';
 import Rate from './rate/Rate';
 import Submit from './submit/Submit';
 import Home from './home/Home';
+import About from './about/About';
 
 import AppHeader from './layout/AppHeader'
 import ScrollReveal from'scrollreveal'
@@ -20,6 +21,7 @@ const ThemeWrapper = () => (
         <Route path="/" component={Home} />
         <Route path="/rate" component={Rate} />  
         <Route path="/submit" component={Submit} />
+		<Route path="/about" component={About} />
       </Route>
     </Router>
 );
