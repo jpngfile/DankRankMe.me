@@ -60,7 +60,7 @@ export default class Rate extends Component {
           <RateMemeContent caption={this.state.data[this.state.index].caption} />
 
     	</div>
-    	<FloatingActionButton secondary={true} className="FloatingActionAdd">
+    	<FloatingActionButton secondary={true} href="/submit" className="FloatingActionAdd">
       		<ContentAdd />
     	</FloatingActionButton>
     </div>
