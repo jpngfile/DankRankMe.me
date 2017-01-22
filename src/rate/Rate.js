@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import kermitMeme from '../../pics/memes/KermitTheFrogMeme.jpg';
+import kermitMeme from '../pics/memes/KermitTheFrogMeme.jpg';
 
 
 //material-ui components
@@ -59,7 +59,7 @@ export default class Rate extends Component {
     	<div className="Meme-display">
           <MemeContent caption={this.state.data[this.state.index].caption} />
           <ArrowButton className="Left-arrow-button" icon={ArrowLeft} onClick={() => this.changeCaption(1)} />
-          
+
           <ArrowButton className="Right-arrow-button" icon={ArrowRight} onClick={() => this.changeCaption(1)}/>
     	</div>
     	<FloatingActionButton secondary={true} className="FloatingActionAdd">
@@ -78,7 +78,7 @@ class Header extends Component {
       <AppBar
         className="Dank-header" title="DankRank"
         iconElementLeft={<IconButton><ActionHome /></IconButton>}
-      /> 
+      />
     );
   }
 }
