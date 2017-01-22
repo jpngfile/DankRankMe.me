@@ -58,8 +58,7 @@ export default class Rate extends Component {
     <div className="Rate">
     	<div className="Meme-display">
           <RateMemeContent caption={this.state.data[this.state.index].caption} />
-          <RateArrowButton className="Left-arrow-button" icon={ArrowLeft} isRight={false} onClick={() => this.changeCaption(1)} />        
-          <RateArrowButton className="Right-arrow-button" icon={ArrowRight} isRight={true} onClick={() => this.changeCaption(1)}/>
+
     	</div>
     	<FloatingActionButton secondary={true} className="FloatingActionAdd">
       		<ContentAdd />
@@ -68,4 +67,8 @@ export default class Rate extends Component {
     );
   }
 };
+
+/*          <RateArrowButton className="Left-arrow-button" icon={ArrowLeft} isRight={false} onClick={() => this.changeCaption(1)} />        
+          <RateArrowButton className="Right-arrow-button" icon={ArrowRight} isRight={true} onClick={() => this.changeCaption(1)}/>
+          */
 
