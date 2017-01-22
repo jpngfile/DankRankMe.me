@@ -12,8 +12,16 @@ import ArrowRight from 'material-ui/svg-icons/navigation/chevron-right';
 import ArrowLeft from 'material-ui/svg-icons/navigation/chevron-left';
 import kermitMeme from '../pics/memes/KermitTheFrogMeme.jpg';
 
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
+
+const CLOUDINARY_UPLOAD_PRESET = 'ix6uuwpz';
+const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/dw2tyakrm/image/upload';
+const OUR_API_POST = "http://sample-env.zfiz29cagi.us-west-2.elasticbeanstalk.com/post/upload?url="
+
 import '../App.css';
 import './Rate.css';
+import $ from 'jquery'
 
 export default class Rate extends Component {
 
@@ -43,6 +51,7 @@ export default class Rate extends Component {
       index : 0,
       length: 4
     }
+	this.onDrop = this.onDrop.bind(this)
   }
   
 componentDidMount() {
@@ -82,6 +91,47 @@ copyEmailBtn.addEventListener('click', function(event) {
     });
   }
 
+  onDrop(file) {
+		let upload = request.post (CLOUDINARY_UPLOAD_URL)
+							.field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+							.field('file',file);
+
+		upload.end((err, response) => {
+			if (err) {
+				console.error(err);
+			}
+
+			if (response.body.secure_url !== '') {
+        var final_url = OUR_API_POST + response.body.secure_url;
+        $.ajax({
+          type: "POST",
+          url: final_url,
+          crossDomain: true,
+          dataType: 'jsonp',
+          success: () => {console.log('IT WORKEDDD');debugger}
+        });
+			}
+		})
+	}
+
+  onDropAccepted() {
+    return(
+      <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>File Upload Succeded!</strong>
+      </div>
+    )
+  }
+
+  onDropRejected() {
+    return(
+      <div class="alert alert-dismissible alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>File Upload Succeded!</strong>
+      </div>
+    )
+  }
+
   render () {
     return (
     <div className="Rate">
@@ -89,13 +139,11 @@ copyEmailBtn.addEventListener('click', function(event) {
           <RateMemeContent caption={this.state.data[this.state.index].caption} />
 
     	</div>
-    	<FloatingActionButton secondary={true} href="/submit" className="FloatingActionAdd">
-      		<ContentAdd />
-    	</FloatingActionButton>
- <a className="js-emaillink hide" >{window.location.href}</a>
-
-<p><button className="js-emailcopybtn FloatingActionCopy">Copy URL</button></p>
-		
+      <Dropzone onDrop={this.onDrop} className="noDropZone">
+      	<FloatingActionButton secondary={true} className="FloatingActionAdd">
+        		<ContentAdd />
+      	</FloatingActionButton>
+    </Dropzone>
     </div>
     );
   }
