@@ -42,8 +42,9 @@ export default class LayoutTopHeader extends Component {
       />
       <Drawer open={this.state.open}>
           <MenuItem>My Rated Memes</MenuItem>
-          <MenuItem>Newest Memes</MenuItem>
+          <MenuItem href="/">Newest Memes</MenuItem>
           <MenuItem>Legacy Memes</MenuItem>
+		  <MenuItem href="/about">About</MenuItem>
           <MenuItem onTouchTap={this.handleToggle}> Close Menu </MenuItem>
         </Drawer>
         </div>

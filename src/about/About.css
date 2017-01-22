@@ -1,0 +1,20 @@
+.about-Display {
+	margin-top:65px!important;
+}
+.iconLogoDoge{
+	padding-top:35px;
+    display: block;
+    margin: auto;
+}
+div{
+	font-family:Calibri;
+}
+.perfectDoge{
+	width:100%;
+}
+.about-Display>div>div{
+	background-color:none!important;
+}
+.about-Display>div>button{
+	background-color:purple!important;
+}
