@@ -36,6 +36,7 @@ export default class Submit extends Component {
 			}
 
 			if (response.body.secure_url !== '') {
+        debugger;
 				this.setState({
 					uploadedFileCloudinaryUrl: response.body.secure_url
 				});
@@ -56,20 +57,20 @@ export default class Submit extends Component {
         		> <p>Drop an image or click to select a file to upload. </p>
         	</Dropzone>
         </div>
-        {this.state.uploadedFileCloudinaryUrl === '' ? null : 
+        {this.state.uploadedFileCloudinaryUrl === '' ? null :
         	<div>
           		<p>{this.state.uploadedFile.name}</p>
           		<img src={this.state.uploadedFileCloudinaryUrl} />
         	</div>}
 
        </div>
-        
+
     );
   }
 }
 
 /*
-<Dropzone 
+<Dropzone
         	multiple={false}
         	accept="image/*"
         	onDrop={this.onImageDrop.bind(this)} >
@@ -81,7 +82,7 @@ export default class Submit extends Component {
 /*
 
 <div>
-        	{this.state.uploadedFileCloudinaryUrl === '' ? null : 
+        	{this.state.uploadedFileCloudinaryUrl === '' ? null :
         	<div>
           		<p>{this.state.uploadedFile.name}</p>
           		<img src={this.state.uploadedFileCloudinaryUrl} />
