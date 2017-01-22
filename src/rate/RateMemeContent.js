@@ -3,7 +3,6 @@ import kermitMeme from '../pics/memes/KermitTheFrogMemeCropped.jpg';
 import ReactSwipe from 'react-swipe';
 import ArrowRight from 'material-ui/svg-icons/navigation/chevron-right';
 import ArrowLeft from 'material-ui/svg-icons/navigation/chevron-left';
-
 import '../App.css';
 import './Rate.css';
 
