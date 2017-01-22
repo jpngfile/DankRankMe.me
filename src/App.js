@@ -4,6 +4,9 @@ import kermitMeme from '../pics/memes/KermitTheFrogMeme.jpg';
 import rightArrow from '../pics/icons/chevron-right.png'
 import leftArrow from '../pics/icons/chevron-left.png'
 
+//material-ui components
+import AppBar from 'material-ui/AppBar';
+
 import './App.css';
 
 
@@ -53,8 +56,9 @@ class App extends Component {
     <Header />
 
     <div className="Meme-display">
-          <ArrowButton className="Left-arrow-button" icon={leftArrow} onClick={() => this.changeCaption(-1)} />
           <MemeContent caption={this.state.data[this.state.index].caption} />
+          <ArrowButton className="Left-arrow-button" icon={leftArrow} onClick={() => this.changeCaption(-1)} />
+          
           <ArrowButton className="Right-arrow-button" icon={rightArrow} onClick={() => this.changeCaption(1)}/>
     </div>
     </div>
@@ -82,12 +86,18 @@ class Appee extends Component {
 class Header extends Component {
   render () {
     return (
-      <div className="Dank-header">
+      {/* <div className="Dank-header">
           <h1 className="Dank-header-title">DankRank</h1>
-      </div>
+      </div>*/},
+      <AppBar
+        className="Dank-header" title="DankRank"
+        iconClassNameRight="muidocs-icon-navigation-expand-more"
+      /> 
     );
   }
 }
+
+/* */
 
 class MemeContent extends Component {
 

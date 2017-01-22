@@ -1,3 +1,5 @@
+
+/* Universal Adjustment */
 * {
         margin: 0;
         padding: 0;
@@ -8,6 +10,7 @@
         background: transparent;
     }
 
+/* Rate Page CSS */
 .App {
   text-align: center;
 }
@@ -28,22 +31,12 @@
   font-size: large;
 }
 
-.Dank-header {
-  background-color: #E53935;
-  text-align: left;
-  
-}
-.Dank-header-title {
-  color :white;
-  font-family: "Impact", Charcoal, sans-serif;
-  padding: 20px;
-  font-size: 30pt;
-  border-style: double;
-}
+
 
 .currentMeme {
-  height :300px;
+  /*height :300px;*/
   /*display:inline;*/
+  width : 100%;
 }
 
 .Meme-display {
@@ -57,24 +50,34 @@
 
 .Arrow-button-img {
   height: 80px;
-  border-style: double;
-  margin-bottom: 110px;
+  /*margin-bottom: 110px;*/
 }
 
 .Arrow-button {
-  border-style: double;
+
 }
 
-/*
+.Dank-header {
+  background-color: #E53935;
+  text-align: left;
+  
+}
+.Dank-header-title {
+  color :white;
+  font-family: "Impact", Charcoal, sans-serif;
+  padding: 20px;
+  font-size: 30pt;
+}
+
+
 .Right-arrow-button {
-  float: left;
-  border-style: double;
+  float: right;
 }
 
 .Left-arrow-button {
-  float :right;
+  float :left;
 }
-*/
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
