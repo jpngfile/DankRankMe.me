@@ -13,21 +13,21 @@
 .currentMeme {
   /*height :300px;*/
   display:inline;
-  width : 100%;
+  width : 90%;
 }
 
 .Meme-display {
-  width: 100%;
-  margin: 0 auto;
+	clear:both;
 }
 
 .Meme-display-component {
-  display :inline-block;
+  /*display :inline-block;*/
   text-align: center;
+  overflow: auto;
 }
 
-.Arrow-button-img {
-  height: 80px;
+.Arrow-button{
+
   /*margin-bottom: 110px;*/
 }
 

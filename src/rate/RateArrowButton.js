@@ -6,11 +6,23 @@ import IconButton from 'material-ui/IconButton';
 
 import '../App.css';
 import './Rate.css';
+
+const styles = {
+  smallIcon: {
+    width: 36,
+    height: 36,
+  },
+  medIcon: {
+    width: 70,
+    height: 70,
+  }
+ }
 export default class RateArrowButton extends Component {
+
   render () {
     return (
-      <IconButton className={"Meme-display-component Arrow-button " + this.props.className} onClick={this.props.onClick}>
-        <ArrowRight />
+      <IconButton className={"Meme-display-component Arrow-button " + this.props.className} iconStyle={styles.smallIcon} onClick={this.props.onClick}>
+        {this.props.isRight? <ArrowRight /> : <ArrowLeft />}
       </IconButton>
     );
   }
