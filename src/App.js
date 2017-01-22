@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import kermitMeme from '../pics/memes/KermitTheFrogMeme.jpg';
-import rightArrow from '../pics/icons/chevron-right.png';
-import leftArrow from '../pics/icons/chevron-left.png';
+import kermitMeme from './pics/memes/KermitTheFrogMeme.jpg';
+import rightArrow from './pics/icons/chevron-right.png';
+import leftArrow from './pics/icons/chevron-left.png';
 
 
 //material-ui components
@@ -52,13 +52,6 @@ class App extends Component {
   render () {
     return (
     <div className="App">
-
-    </div>
-    );
-  }
-}
-
-/* 
     
     <Header />
 
@@ -68,7 +61,13 @@ class App extends Component {
           <ArrowButton className="Right-arrow-button" icon={rightArrow} onClick={() => this.changeCaption(1)}/>
         
     </div>
-     {this.props.children} */
+     {this.props.children}
+    </div>
+    );
+  }
+}
+
+/*  */
 
 class Header extends Component {
   render () {
