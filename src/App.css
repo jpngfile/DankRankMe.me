@@ -12,7 +12,7 @@
 
 /* Rate Page CSS */
 .Rate {
- 
+  text-align: center;
 }
 
 .App {
@@ -21,8 +21,8 @@
 
 .FloatingActionAdd {
   float: right;
-  margin-right: 2px;
-  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .App-logo {
@@ -45,7 +45,7 @@
 
 .currentMeme {
   /*height :300px;*/
-  /*display:inline;*/
+  display:inline;
   width : 100%;
 }
 
@@ -71,11 +71,11 @@
 .Dank-header {
   background-color: #E53935;
   text-align: left;
-  
+  font-family: "Impact", Charcoal, sans-serif;
 }
 .Dank-header-title {
   color :white;
-  font-family: "Impact", Charcoal, sans-serif;
+  
   padding: 20px;
   font-size: 30pt;
 }

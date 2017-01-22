@@ -3,10 +3,7 @@ import kermitMeme from '../../pics/memes/KermitTheFrogMeme.jpg';
 
 
 //material-ui components
-import AppBar from 'material-ui/AppBar';
 import IconButton from 'material-ui/IconButton';
-import arrowBack from 'material-ui/svg-icons/navigation/close';
-import ActionHome from 'material-ui/svg-icons/navigation/arrow-back';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ArrowRight from 'material-ui/svg-icons/navigation/chevron-right';
@@ -54,7 +51,6 @@ export default class Rate extends Component {
   render () {
     return (
     <div className="Rate">
-    	<Header />
 
     	<div className="Meme-display">
           <MemeContent caption={this.state.data[this.state.index].caption} />
@@ -69,19 +65,6 @@ export default class Rate extends Component {
     );
   }
 };
-
-
-
-class Header extends Component {
-  render () {
-    return (
-      <AppBar
-        className="Dank-header" title="DankRank"
-        iconElementLeft={<IconButton><ActionHome /></IconButton>}
-      /> 
-    );
-  }
-}
 
 
 class MemeContent extends Component {
